@@ -1,7 +1,6 @@
 %h4 New page data
 
-
-= form_for :page, url: pages_path do |f|
+= form_for :page, url: pages_path, remote: true do |f|
   %p
     = f.label :title
     %br/

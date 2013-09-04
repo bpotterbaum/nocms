@@ -20,5 +20,21 @@
 
 
 :javascript
+  var page = '#{@page_latest.html}';
+
+  if(page.length > 0){
+
+    console.log(page);
+
+    page = JSON.parse(page);
+
+    $.each(page, function(i, item) {
+      $('#'+i).html(unescape(item));
+    });
+  }
   $('body').show();
+
+
+
+
 
